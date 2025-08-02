@@ -1,0 +1,192 @@
+body {
+  background: linear-gradient(145deg, #5433FF, #20BDFF, #A5FECB);
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background 0.4s ease;
+}
+
+
+.card {
+  border: 3px solid black;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+.title {
+  background-image: linear-gradient(180deg, #fc3807, #271492);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+
+.list-group-item {
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-time {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.overdue {
+  color: red;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+input.form-control,
+select.form-select {
+  background-color: whitesmoke;
+  border-radius: 12px;
+  padding: 9px;
+  border: 2px solid black;
+}
+
+.dlt {
+   width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #ff4e50, #ff4e08);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dlt:hover {
+  background: linear-gradient(45deg, #e52d27, #ff6f00); 
+  transform: scale(1.05);
+}
+
+.b1 {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(132deg, #5433FF, #20BDFF);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+
+
+.b1:hover {
+  background: linear-gradient(132deg, #5433FF, #A5FECB);
+}
+
+.b2 {
+  border-radius: 12px;
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 8px 11px;
+  justify-content: center;
+  background: linear-gradient(132deg, #5433FF, #20BDFF);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease;
+}
+
+.b2:hover {
+  background: linear-gradient(132deg, #5433FF, #A5FECB);
+  transform: scale(1.02);
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.b3 {
+  border-radius: 6px;
+  border: 1px solid black;
+  font-size: 16px;
+  padding: 4px 6px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease;
+}
+
+
+
+.b3:hover {
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+
+.all {
+  background-color: #20BDFF;
+}
+.all:hover {
+  background-color: #5433FF;
+}
+
+.comp {
+  background-color: #50cf15;
+}
+.comp:hover {
+  background-color: #16b33b;
+}
+
+.pend {
+  background-color: #dc3545;
+}
+.pend:hover {
+  background-color: #c82333;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.overdue {
+  color: red;
+  font-weight: 600;
+}
+
+
+.scroll-wrapper {
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+
+.sticky-filters {
+  margin-bottom: 12px;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do App</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container py-4">
+    <div class="text-center mb-4">
+      <h1 class="title m-2">To-Do App</h1>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <div class="card h-100">
+          <div class="card-body p-4">
+
+            <h5 class="mb-3">
+              <i class="fa-solid fa-folder me-2 text-primary"></i> Manage Lists
+            </h5>
+
+            <div class="row g-2 mb-3">
+              <div class="col-12 col-sm-6 d d-flex gap-2">
+                <select id="listSelector" class="form-select"></select>
+                <button class="btn dlt text-light" onclick="deleteList()" title="Delete Current List">
+                  <i class="fa-solid fa-trash-can"></i>
+              </div>
+              <div class="col-12 col-sm-6 d-flex gap-2">
+                <input type="text" id="newListInput" class="form-control" placeholder="New list" />
+                <button class="b1 text-light" onclick="createList()">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <hr>
+
+            <h5 class="mb-3">
+              <i class="fa-solid fa-square-plus me-2 text-success"></i> Add New Task
+            </h5>
+
+            <div class="mb-3">
+              <input type="text" id="taskInput" class="form-control" placeholder="Task Title" />
+            </div>
+
+            <h5 class="mb-3">
+              <i class="fa-solid fa-calendar-days me-2 text-danger"></i> Set Due Date
+            </h5>
+
+            <div class="mb-3">
+              <input type="datetime-local" id="taskDateTime" class="form-control" />
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-lg rounded-pill px-5 b2 text-light" onclick="addTask()">
+                <i class="fa-solid fa-plus me-2"></i> Add Task
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+<div class="col-12 col-md-6">
+  <div class="card h-100">
+    <div class="card-body p-0">
+      <div class="scroll-wrapper p-4">
+
+        <h5 class="mb-3">
+          <i class="fa-solid fa-list-check me-2 text-dark"></i> Your Tasks
+        </h5>
+
+        <div class="d-flex flex-wrap align-items-center gap-2 sticky-filters">
+          <button class="btn btn-sm px-4 b3 all rounded-pill text-light" onclick="setFilter('all')">All</button>
+          <button class="btn btn-sm px-4 b3 comp rounded-pill text-light" onclick="setFilter('completed')">Completed</button>
+          <button class="btn btn-sm px-4 b3 pend rounded-pill text-light" onclick="setFilter('pending')">Pending</button>
+        </div>
+
+        <div class="mb-3">
+          <p class="fw-bold mb-1">
+            Total: <span id="totalCount">0</span> |
+            Completed: <span id="completedCount">0</span> |
+            Pending: <span id="pendingCount">0</span>
+          </p>
+          <hr />
+        </div>
+
+        <ul id="taskList" class="list-group"></ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
