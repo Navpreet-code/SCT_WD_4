@@ -1,4 +1,4 @@
-# ✅ SkillCraft Task 4 – To-Do List Application (SCT_WD_4)
+# 📝 SkillCraft Task 4 – To-Do List Application (SCT_WD_4)
 
 ✅ This project is developed as part of my Web Development Internship at **SkillCraft Technology**.  
 It demonstrates my ability to build a clean, responsive, and fully-functional **To-Do List Web App** using HTML, CSS, JavaScript, and Bootstrap.
